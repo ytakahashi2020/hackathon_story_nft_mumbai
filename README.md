@@ -112,6 +112,21 @@ https://note.com/standenglish/n/nadf776c67084
 
 ![](images/8.png)
 
+### 2 スマートウォレットについて
+
+#### 0.導入の理由
+
+#### 1.処理の流れについて
+
+#### 2.thirdwebの「Simple Wallet Factory」について
+
+今回、thirdwebを使用し、スマートウォレット作成のためのFacrtoryコントラクトを作成します。
+
+![](images/9.png)
+
+https://thirdweb.com/thirdweb.eth/AccountFactory
+
+次のように、
 
 ## Getting Started
 

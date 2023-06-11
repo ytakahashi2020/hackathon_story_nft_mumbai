@@ -14,6 +14,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       supportedWallets={[
         metamaskWallet(),
         localWallet(),
+        smartWallet({
+          factoryAddress: process.env.NEXT_PUBLIC_FACTORY_ADDRESS!,
+          thirdwebApiKey: process.env.NEXT_PUBLIC_API_KEY!,
+          gasless: true,
+          personalWallets:[
+            metamaskWallet()
+          ]
+        })
       ]}
       sdkOptions={{
         gasless: {
