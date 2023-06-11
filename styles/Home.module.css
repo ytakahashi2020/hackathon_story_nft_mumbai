@@ -117,3 +117,23 @@
 .logo img {
   filter: invert(1);
 }
+.NFTGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px; 
+}
+
+.NFTCard {
+  background-color: #1b2129;
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  max-width: 300px;
+}
