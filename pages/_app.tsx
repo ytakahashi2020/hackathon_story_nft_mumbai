@@ -13,15 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       activeChain={activeChain}
       supportedWallets={[
         metamaskWallet(),
-        localWallet(),
-        smartWallet({
-          factoryAddress: process.env.NEXT_PUBLIC_FACTORY_ADDRESS!,
-          thirdwebApiKey: process.env.NEXT_PUBLIC_API_KEY!,
-          gasless: true,
-          personalWallets:[
-            metamaskWallet()
-          ]
-        })
+        localWallet()
       ]}
       sdkOptions={{
         gasless: {
