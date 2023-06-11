@@ -16,15 +16,15 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <ConnectWallet />
-        aa
+        <h1>zksync Era Testnet Garelly</h1>
         <Web3Button 
           contractAddress={NFT_CONTRACT_ADDRESS}
           action={(contract) => contract.erc721.claim(1)}
         >Claim
         </Web3Button>
+
         <div>
-          <h3>Gallery</h3>
+          
           <div className={styles.NFTGrid}>
           {!isLoadingNFTs && (
             nfts?.map((nft, index) => (
