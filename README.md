@@ -41,6 +41,12 @@ For any questions, suggestions, join our discord at [https://discord.gg/thirdweb
 
 ## 2 zksyncEra Testnetの課題と現状
 
+### 0 導入の理由
+
+Ethereumは「ブロックチェーンのトリレンマ」のうち、「セキュリティ」「分散化」を重視しているため、「スケーラビリティ」に課題が残っています。
+
+zkEVMはこの「セキュリティ」と「分散化」を損なうことなく、「スケーラビリティ」を解決する手段の一つであるため、採用しました。
+
 ### 1 作成済みURL
 
 NFT画像の表示とメタマスクによるclaimを行います。
@@ -80,4 +86,29 @@ https://thirdweb.com/thirdweb.eth/AccountFactory
 ![](images/1.png)
 https://github.com/thirdweb-dev/ozdefender-autotask?ref=blog.thirdweb.com
 
+
+## 3 ローカルウォレットとスマートウォレットについて
+
+### 1 ローカルウォレットについて
+
+#### 0.導入の理由
+
+現状、「メタマスク」などのウォレットを持っていない場合、NFT配布イベントなどに参加することが困難です。
+
+その場で暫定的なウォレットを作成する「ローカルウォレット」を採用することで、メタマスクなどのウォレットを持っていない層の参加を見込むことができます。
+
+#### 1.処理の流れについて
+
+「Connect Wallet」押下時に「continue as guest」を選択し、ローカルウォレットを作成画面に遷移します。
+![](images/4.png)
+
+任意のパスワードを設定した上で、「Create a new wallet」を選択します。
+![](images/5.png)
+
+「Backup wallet」を押下することで、ローカルウォレットの情報を保存します。
+![](images/6.png)
+
+なお、この保存情報の内容は下の記事にまとめています。
+
+https://note.com/standenglish/n/nadf776c67084
 

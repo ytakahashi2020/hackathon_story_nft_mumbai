@@ -16,6 +16,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         metamaskWallet(),
         localWallet(),
       ]}
+      sdkOptions={{
+        gasless: {
+          openzeppelin: {
+            relayerUrl: "https://api.defender.openzeppelin.com/autotasks/e200a696-25ba-4c62-bc11-33707a1e724c/runs/webhook/9b4a6556-3f26-4b6a-8638-3c305d501266/T8PpSHE1DH2QCAW4BLADvo"
+          }
+        }
+      }}
       >
       <Component {...pageProps} />
     </ThirdwebProvider>
