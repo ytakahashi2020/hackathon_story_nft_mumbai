@@ -68,7 +68,7 @@ https://thirdweb.com/thirdweb.eth/AccountFactory
 
 #### 3. thirdwebによるフォワーダー使用　⇨　zksyncEra Testnet 未対応
 
-![](../../images/1.png)
+![](images/1.png)
 https://github.com/thirdweb-dev/ozdefender-autotask?ref=blog.thirdweb.com
 
 
