@@ -36,3 +36,10 @@ For any questions, suggestions, join our discord at [https://discord.gg/thirdweb
 
 
 # 仕様
+
+## 2 zksyncEra　Testnetの課題と現状
+
+### 1 作成済みURL
+
+https://zksync-era-testnet-garelly.vercel.app/
+
