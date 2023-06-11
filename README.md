@@ -53,6 +53,8 @@ https://zksync-era-testnet-garelly.vercel.app/
 
 zksync Era Testnetのコントラクトはこちら
 
+![](images/3.png)
+
 https://thirdweb.com/zksync-era-testnet/0x0929624DFbFdA73cdC67dfEEA269003d380A4D1e
 
 ### 2 スマートウォレットについて
