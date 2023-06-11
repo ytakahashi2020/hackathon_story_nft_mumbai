@@ -43,10 +43,17 @@ For any questions, suggestions, join our discord at [https://discord.gg/thirdweb
 
 ### 1 作成済みURL
 
-zksync Era Testnetで作成したURLはこちらです。
-
 NFT画像の表示とメタマスクによるclaimを行います。
+
+zksync Era Testnetで作成したプロジェクトはこちらです。
+
+![](images/2.png)
+
 https://zksync-era-testnet-garelly.vercel.app/
+
+zksync Era Testnetのコントラクトはこちら
+
+https://thirdweb.com/zksync-era-testnet/0x0929624DFbFdA73cdC67dfEEA269003d380A4D1e
 
 ### 2 スマートウォレットについて
 
