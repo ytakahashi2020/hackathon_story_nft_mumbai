@@ -112,3 +112,40 @@ https://github.com/thirdweb-dev/ozdefender-autotask?ref=blog.thirdweb.com
 
 https://note.com/standenglish/n/nadf776c67084
 
+以上で、ローカルウォレットが完成しました。
+
+![](images/7.png)
+
+作成したばかりのウォレットであるため、ガス代がありません。
+
+ガス代については、OpenZeppelin Defenderを使用することにより、ガスレストランザクションを実現しています。
+
+#### 2.ガスレストランザクションについて
+
+今回のコードはthirdweb SDKを使用しています。
+
+「sdkOptions」から「relayerURL」を指定することで、ガスレストランザクションを実現しています。
+
+```ts
+<ThirdwebProvider 
+      activeChain={activeChain}
+      supportedWallets={[
+        metamaskWallet(),
+        localWallet(),
+      ]}
+      sdkOptions={{
+        gasless: {
+          openzeppelin: {
+            relayerUrl: "https://api.defender.openzeppelin.com/autotasks/e200a696-25ba-4c62-bc11-33707a1e724c/runs/webhook/9b4a6556-3f26-4b6a-8638-3c305d501266/T8PpSHE1DH2QCAW4BLADvo"
+          }
+        }
+      }}
+>
+```
+
+「OpenZeppelin Defender」の「Relay」でガスを代わりに支払うウォレットを作成します。
+
+「Autotask」において、webhookを作成します。
+
+![](images/8.png)
+
