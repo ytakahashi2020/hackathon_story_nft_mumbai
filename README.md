@@ -58,7 +58,11 @@ https://github.com/thirdweb-dev/ozdefender-autotask?ref=blog.thirdweb.com
 
 その場で暫定的なウォレットを作成する「ローカルウォレット」を採用することで、メタマスクなどのウォレットを持っていない層の参加を見込むことができます。
 
-### 1.処理の流れについて
+### 1.処理の流れ(概要)について
+Webページからその場でローカルウォレットを作成し、ガスレストランザクションを利用して、NFTを取得します。
+
+
+### 2.処理の流れ（詳細）について
 
 「Connect Wallet」押下時に「continue as guest」を選択し、ローカルウォレットを作成画面に遷移します。
 ![](images/4.png)
@@ -81,7 +85,7 @@ https://note.com/standenglish/n/nadf776c67084
 
 ガス代については、OpenZeppelin Defenderを使用することにより、ガスレストランザクションを実現しています。
 
-### 2.ガスレストランザクションについて
+### 3.ガスレストランザクションについて
 
 今回のコードはthirdweb SDKを使用しています。
 
@@ -120,7 +124,12 @@ ERC4337のアカウントアブストラクションでは個々のロジック�
 
 そのため、将来の脅威への対策として、アカウントアブストラクションを利用したスマートウォレットを導入いたしました。
 
-### 1.処理の流れについて
+### 1.処理の流れ（概要）について
+
+こちらの処理は今回実装したパーソナルウォレットであるメタマスクからスマートウォレットを作成し、「claim」により、NFTを取得しています。
+
+
+### 2.処理の流れ（詳細）について
 
 「Connect Wallet」押下時に「Smart Wallet」を選択し、スマートウォレットを作成画面に遷移します。
 ![](images/11.png)
@@ -149,7 +158,7 @@ https://mumbai.polygonscan.com/tx/0x09ce4f81cf54b8256032d3cded39be494db2efd6f912
 ![](images/15.png)
 https://mumbai.polygonscan.com/address/0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789#code
 
-### 2.thirdwebの「Simple Wallet Factory」について
+### 3.thirdwebの「Simple Wallet Factory」について
 
 今回、thirdwebを使用し、スマートウォレット作成のためのFacrtoryコントラクトを作成します。
 
@@ -164,7 +173,13 @@ https://thirdweb.com/thirdweb.eth/AccountFactory
 https://thirdweb.com/mumbai/0x4AD8B5a13114d44183f68250898cB546CADd8c54
 
 
+### 4.実装コード箇所について
 
+こちらが実装箇所になります。
+
+「factoryAddress」に上で設定したコントラクトアドレスを、「thirdwebApiKey」に別で取得した、thirdwebのAPIキーを設定しています。
+
+「gasless」を「true」としてガスレストランザクションを実施し、「PersonalWallet」に接続元であるメタマスクを入れています。
 ```ts:_app.tsx
 <ThirdwebProvider 
       activeChain={activeChain}
@@ -181,6 +196,8 @@ https://thirdweb.com/mumbai/0x4AD8B5a13114d44183f68250898cB546CADd8c54
       ]}
       >
 ```
+
+以上がスマートウォレットを使用したNFTの取得になります。
 
 ## Getting Started
 
