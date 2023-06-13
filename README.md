@@ -87,7 +87,7 @@ https://note.com/standenglish/n/nadf776c67084
 
 「sdkOptions」から「relayerURL」を指定することで、ガスレストランザクションを実現しています。
 
-```ts
+```ts:_app.tsx
 <ThirdwebProvider 
       activeChain={activeChain}
       supportedWallets={[
@@ -143,11 +143,11 @@ Claim実行時に、実際にトランザクションを行うのは,thirdwebの
 （これは、mumbaiがテストトークンであり、thirdwebがガス代を要求していないためです。
 　メインネットではガス代が必要だと考えております。）
 ![](images/14.png)
-
+https://mumbai.polygonscan.com/tx/0x09ce4f81cf54b8256032d3cded39be494db2efd6f9128a30f0d1a79a2c7fbc2c
 
 実際に処理を行う、EntryPointコントラクトはこちらで、これはthirdwebのものを利用しています。
 ![](images/15.png)
-
+https://mumbai.polygonscan.com/address/0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789#code
 
 ### 2.thirdwebの「Simple Wallet Factory」について
 
@@ -157,7 +157,30 @@ Claim実行時に、実際にトランザクションを行うのは,thirdwebの
 
 https://thirdweb.com/thirdweb.eth/AccountFactory
 
-次のように、
+次のように、コントラクトを作成しました。
+
+![](images/10.png)
+
+https://thirdweb.com/mumbai/0x4AD8B5a13114d44183f68250898cB546CADd8c54
+
+
+
+```ts:_app.tsx
+<ThirdwebProvider 
+      activeChain={activeChain}
+      supportedWallets={[
+        metamaskWallet(),
+        smartWallet({
+          factoryAddress: process.env.NEXT_PUBLIC_FACTORY_ADDRESS!,
+          thirdwebApiKey: process.env.NEXT_PUBLIC_API_KEY!,
+          gasless: true,
+          personalWallets:[
+            metamaskWallet()
+          ]
+        })
+      ]}
+      >
+```
 
 ## Getting Started
 
