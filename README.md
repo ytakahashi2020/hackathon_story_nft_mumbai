@@ -4,21 +4,22 @@
 
 ## 0 導入の理由
 
-Ethereumは「ブロックチェーンのトリレンマ」のうち、「セキュリティ」「分散化」を重視しているため、「スケーラビリティ」に課題が残っています。
+Ethereumは **「ブロックチェーンのトリレンマ」** のうち、「セキュリティ」「分散化」を重視しているため、**「スケーラビリティ」に課題**が残っています。
 
-zkEVMはこの「セキュリティ」と「分散化」を損なうことなく、「スケーラビリティ」を解決する手段の一つであるため、採用しました。
+**zkEVM**はこの「セキュリティ」と「分散化」を損なうことなく、「スケーラビリティ」を解決する手段の一つであるため、採用しました。
 
 ## 1 作成済みURL
 
-NFT画像の表示とメタマスクによるclaimを行います。
+**NFT画像の表示**と**メタマスクによるclaim**を行います。
 
 zksync Era Testnetで作成したプロジェクトはこちらです。
 
-![](images/2.png)
-
 https://zksync-era-testnet-garelly.vercel.app/
 
-zksync Era Testnetのコントラクトはこちら
+![](images/2.png)
+
+
+zksync Era Testnetの**コントラクト**はこちら
 
 ![](images/3.png)
 
@@ -26,24 +27,26 @@ https://thirdweb.com/zksync-era-testnet/0x0929624DFbFdA73cdC67dfEEA269003d380A4D
 
 ## 2 スマートウォレットについて
 
-thirdwebのアカウントアブストラクション作成のコントラクトである「Simple Wallet Factory (beta)」がzksyncEra Testnetで未対応。
+thirdwebのアカウントアブストラクション作成のコントラクトである **「Simple Wallet Factory (beta)」** がzksyncEra Testnetで未対応でした。
 
 https://thirdweb.com/thirdweb.eth/AccountFactory
 
-そのため、この機能はmumbaiで作ることとしました。
+そのため、この機能は**mumbai**で作ることとしました。
 
 ## 3 ローカルウォレットについて
 
-ローカルウォレットの実装は可能でしたが、ガスレストランザクションで未対応箇所があったため、mumbaiで作りました。
+ローカルウォレットの実装は可能でしたが、**ガスレストランザクション**で未対応箇所があったため、mumbaiで作りました。
 
 当初考えていた構成は次のようになります。
 
-### 1. thirdwebの機能を使い、ローカルウォレット作成　⇨　可能
+### 1. thirdwebの機能を使い、ローカルウォレット作成 ⇨ 可能
 
-### 2. OpenZeppelin Defenderによるリレイヤー・オートタスクの作成　⇨ 可能
+### 2. OpenZeppelin Defenderによるリレイヤー・オートタスクの作成 ⇨ 可能
 
-### 3. thirdwebによるフォワーダー使用　⇨　zksyncEra Testnet 未対応
+### 3. thirdwebによるフォワーダー使用 ⇨ **zksyncEra Testnet 未対応**
 
+
+以下が、**対応しているチェーンの一覧**です。
 ![](images/1.png)
 https://github.com/thirdweb-dev/ozdefender-autotask?ref=blog.thirdweb.com
 
@@ -54,42 +57,42 @@ https://github.com/thirdweb-dev/ozdefender-autotask?ref=blog.thirdweb.com
 
 ### 0.導入の理由
 
-現状、「メタマスク」などのウォレットを持っていない場合、NFT配布イベントなどに参加することが困難です。
+現状、**「メタマスク」などのウォレット**を持っていない場合、NFT配布イベントなどに参加することが困難です。
 
-その場で暫定的なウォレットを作成する「ローカルウォレット」を採用することで、メタマスクなどのウォレットを持っていない層の参加を見込むことができます。
+**その場で暫定的なウォレットを作成する「ローカルウォレット」** を採用することで、メタマスクなどのウォレットを持っていない層の参加を見込むことができます。
 
 ### 1.処理の流れ(概要)について
-Webページからその場でローカルウォレットを作成し、ガスレストランザクションを利用して、NFTを取得します。
+Webページから**その場でローカルウォレットを作成**し、**ガスレストランザクション**を利用して、NFTを取得します。
 
 
 ### 2.処理の流れ（詳細）について
 
-「Connect Wallet」押下時に「continue as guest」を選択し、ローカルウォレットを作成画面に遷移します。
+「Connect Wallet」押下時に **「continue as guest」** を選択し、ローカルウォレットを作成画面に遷移します。
 ![](images/4.png)
 
-任意のパスワードを設定した上で、「Create a new wallet」を選択します。
+任意のパスワードを設定した上で、**「Create a new wallet」** を選択します。
 ![](images/5.png)
 
-「Backup wallet」を押下することで、ローカルウォレットの情報を保存します。
+**「Backup wallet」** を押下することで、ローカルウォレットの情報を保存します。
 ![](images/6.png)
 
 なお、この保存情報の内容は下の記事にまとめています。
 
 https://note.com/standenglish/n/nadf776c67084
 
-以上で、ローカルウォレットが完成しました。
+以上で、**ローカルウォレット**が完成しました。
 
 ![](images/7.png)
 
-作成したばかりのウォレットであるため、ガス代がありません。
+作成したばかりのウォレットであるため、**ガス代がありません。**
 
-ガス代については、OpenZeppelin Defenderを使用することにより、ガスレストランザクションを実現しています。
+ガス代については、**OpenZeppelin Defender**を使用することにより、ガスレストランザクションを実現しています。
 
 ### 3.ガスレストランザクションについて
 
-今回のコードはthirdweb SDKを使用しています。
+今回のコードは**thirdweb SDK**を使用しています。
 
-「sdkOptions」から「relayerURL」を指定することで、ガスレストランザクションを実現しています。
+「sdkOptions」から **「relayerURL」** を指定することで、**ガスレストランザクション**を実現しています。
 
 ```ts:_app.tsx
 <ThirdwebProvider 
@@ -108,9 +111,9 @@ https://note.com/standenglish/n/nadf776c67084
 >
 ```
 
-「OpenZeppelin Defender」の「Relay」でガスを代わりに支払うウォレットを作成します。
+**「OpenZeppelin Defender」** の **「Relay」** でガスを代わりに支払うウォレットを作成します。
 
-「Autotask」において、webhookを作成します。
+**「Autotask」** において、webhookを作成します。
 
 ![](images/8.png)
 
@@ -118,49 +121,49 @@ https://note.com/standenglish/n/nadf776c67084
 
 ### 0.導入の理由
 
-量子コンピュータの発展により、将来、公開鍵から秘密鍵が理論上導かれてしまうとされています。
+量子コンピュータの発展により、将来、**公開鍵から秘密鍵が理論上導かれてしまう**とされています。
 
-ERC4337のアカウントアブストラクションでは個々のロジックを変更することができるため、量子耐性の強い署名方法に変更することが可能です。
+ERC4337の**アカウントアブストラクション**では**個々のロジックを変更する**ことができるため、量子耐性の強い署名方法に変更することが可能です。
 
-そのため、将来の脅威への対策として、アカウントアブストラクションを利用したスマートウォレットを導入いたしました。
+そのため、将来の脅威への対策として、**アカウントアブストラクション**を利用したスマートウォレットを導入いたしました。
 
 ### 1.処理の流れ（概要）について
 
-こちらの処理は今回実装したパーソナルウォレットであるメタマスクからスマートウォレットを作成し、「claim」により、NFTを取得しています。
+こちらの処理は今回実装した**パーソナルウォレットであるメタマスク**から**スマートウォレット**を作成し、「claim」により、**NFTを取得**しています。
 
 
 ### 2.処理の流れ（詳細）について
 
-「Connect Wallet」押下時に「Smart Wallet」を選択し、スマートウォレットを作成画面に遷移します。
+「Connect Wallet」押下時に **「Smart Wallet」** を選択し、スマートウォレットを作成画面に遷移します。
 ![](images/11.png)
 
-「Link Personal Wallet」から、このアカウントに接続するためのウォレットを選択します。
+**「Link Personal Wallet」** から、このアカウントに接続するためのウォレットを選択します。
 
 ここでは、メタマスクからの接続を実装しています。
 ![](images/12.png)
 
-これで、スマートウォレットが作成できました。
+これで、**スマートウォレット**が作成できました。
 
-なお、作成したばかりのため、スマートウォレットにはトークンがありません。
+なお、作成したばかりのため、スマートウォレットには**トークンがありません。**
 ![](images/13.png)
 
 
-Claim実行時に、実際にトランザクションを行うのは,thirdwebのバンドラーアカウントになります。
+Claim実行時に、実際にトランザクションを行うのは,thirdwebの**バンドラーアカウント**になります。
 
-そのため、今回はガス代は必要ありません。
+そのため、**今回はガス代は必要ありません。**
 
 （これは、mumbaiがテストトークンであり、thirdwebがガス代を要求していないためです。
-　メインネットではガス代が必要だと考えております。）
+ メインネットではガス代が必要だと考えております。）
 ![](images/14.png)
 https://mumbai.polygonscan.com/tx/0x09ce4f81cf54b8256032d3cded39be494db2efd6f9128a30f0d1a79a2c7fbc2c
 
-実際に処理を行う、EntryPointコントラクトはこちらで、これはthirdwebのものを利用しています。
+実際に処理を行う、**EntryPointコントラクト**はこちらで、これはthirdwebのコントラクトを利用しています。
 ![](images/15.png)
 https://mumbai.polygonscan.com/address/0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789#code
 
 ### 3.thirdwebの「Simple Wallet Factory」について
 
-今回、thirdwebを使用し、スマートウォレット作成のためのFacrtoryコントラクトを作成します。
+今回、thirdwebを使用し、スマートウォレット作成のための**Facrtoryコントラクト**を作成します。
 
 ![](images/9.png)
 
@@ -177,9 +180,9 @@ https://thirdweb.com/mumbai/0x4AD8B5a13114d44183f68250898cB546CADd8c54
 
 こちらが実装箇所になります。
 
-「factoryAddress」に上で設定したコントラクトアドレスを、「thirdwebApiKey」に別で取得した、thirdwebのAPIキーを設定しています。
+**「factoryAddress」**　に上で設定したコントラクトアドレスを、**「thirdwebApiKey」**　に別で取得した、thirdwebのAPIキーを設定しています。
 
-「gasless」を「true」としてガスレストランザクションを実施し、「PersonalWallet」に接続元であるメタマスクを入れています。
+**「gasless」**　を「true」としてガスレストランザクションを実施し、**「PersonalWallet」**　に接続元であるメタマスクを入れています。
 ```ts:_app.tsx
 <ThirdwebProvider 
       activeChain={activeChain}
@@ -197,7 +200,7 @@ https://thirdweb.com/mumbai/0x4AD8B5a13114d44183f68250898cB546CADd8c54
       >
 ```
 
-以上がスマートウォレットを使用したNFTの取得になります。
+以上が**スマートウォレットを使用したNFTの取得**になります。
 
 ## Getting Started
 
