@@ -1,15 +1,41 @@
 .container {
+  width: 100%;
   padding: 0 2rem;
 }
 
 .main {
+  position: relative;
+  z-index: 0;
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.main:before {
+  content: '';
+  background-image: url('/images/illustrations/sample.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(60%);
+  /* filter: blur(5px); */
+  z-index: -1;
+}
+
+.headerWalletConnectButton{
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 .title a {
@@ -117,6 +143,62 @@
 .logo img {
   filter: invert(1);
 }
+
+.mainvisual{
+  min-height: 400px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 80px 0;
+  /* background-image: url('/images/illustrations/sample.jpeg'); */
+}
+
+.backButton{
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  font-size: 24px;
+  background-color: rgba(0,0,0,.4);
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+}
+
+.mainvisualButtons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.mainvisualButtons button{
+  margin: 8px;
+}
+.mainvisualHeader{
+
+}
+.mainvisualTitle{
+  font-size: 60px;
+  margin: 0;
+  font-family: 'Trade Winds', cursive;
+}
+@media (max-width: 600px) {
+  .mainvisualTitle{
+    font-size: 40px;
+  }
+}
+
+.mainvisualDescription{
+  font-family: 'Trade Winds', cursive;
+  max-width: 420px;
+  margin: 20px auto;
+}
+
+
 .NFTGrid {
   display: flex;
   flex-wrap: wrap;
@@ -127,13 +209,61 @@
 }
 
 .NFTCard {
-  background-color: #1b2129;
+  /* background-color: rgba(27,33,41, 0.5); */
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
-  color: inherit;
+  color: #fff;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  /* border: 1px solid #eaeaea; */
+  border: 1px solid rgba(255,255,255, .6);
   border-radius: 10px;
   max-width: 300px;
+}
+
+.NFTCard img{
+  border-radius: 8px;
+}
+
+.nftInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  text-align: center;
+}
+
+.nftInfoHeader{
+  margin-bottom: 20px;
+}
+.nftImgWrapper{
+  width: 100%;
+}
+.nftImgWrapper img{
+  width: 100%;
+  max-width: 620px;
+}
+
+.nftHistory{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.nftHistoryItem{
+  background-color: rgba(255,255,255,.2);
+  margin-bottom: 4px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.trait{
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 4px;
+  background-color: rgba(255,255,255,.2);
+  border-radius: 4px;
 }
