@@ -17,10 +17,10 @@ const Home: NextPage = () => {
   return (
     <main className={styles.main}>
       <span className={styles.headerWalletConnectButton}>
-        {/* <ConnectWallet 
+        <ConnectWallet 
           theme="dark"
           btnTitle="Connect Wallet"
-        /> */}
+        />
       </span>
       <div className={styles.container}>
         <section className={styles.mainvisual}>
@@ -30,13 +30,13 @@ const Home: NextPage = () => {
             Story NFT is a pioneering NFT that blends AI and crypto, using AI-generated attributes to create unique images for each NFT, ushering in an uncharted breed of NFTs.
             </p>
           </div>
-          {/* <div className={styles.mainvisualButtons}>
+          <div className={styles.mainvisualButtons}>
             <Web3Button 
               contractAddress={NFT_CONTRACT_ADDRESS}
               action={(contract) => contract.erc721.claim(1)}
             >Claim
             </Web3Button>
-          </div> */}
+          </div>
         </section>
 
         <section>
