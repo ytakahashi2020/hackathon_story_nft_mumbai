@@ -31,9 +31,15 @@ const NFTDetailPage = () => {
         {/* <h3>NFT Dtail Page</h3> */}
         <div className={styles.nftInfo}>
           <div className={styles.nftInfoHeader}>
-            <button onClick={() => router.back()} className={styles.backButton}>Back</button>
+            <button onClick={() => router.back()} className={styles.backButton}>
+              Back
+            </button>
             <h1>{nft?.metadata.name}</h1>
-            <div>
+            <div className={styles.description}>
+              {`${nft?.metadata.description.substring(0, 300)}.....`}
+            </div>
+
+            {/* <div>
               <span>Traits:</span>
               {nft?.metadata?.attributes?.map((attribute, index) => (
                 <span key={index} className={styles.trait}>
@@ -41,7 +47,7 @@ const NFTDetailPage = () => {
                   {attribute.value}
                 </span>
               ))}
-            </div>
+            </div> */}
           </div>
           <div className={styles.nftImgWrapper}>
             {!isLoadingNFT && (
@@ -57,37 +63,35 @@ const NFTDetailPage = () => {
         </div>
 
         <div className={styles.nftHistory}>
-            <h3>History:</h3>
-            {!isLoadingEvents && (
-              <div>
-                {events?.map((event, index) => (
-                  <div key={index} className={styles.nftHistoryItem}>
-                    <div>
-                      <span className={styles.nftHistoryCaption}>From: </span>
-                      {event.data.from}
-                    </div>
-                    <div className={styles.nftHistoryCaption}>
-                      <span className={styles.nftHistoryCaption}>To: </span>
-                      {event.data.to}
-                    </div>
+          {/* <h3>History:</h3>
+          {!isLoadingEvents && (
+            <div>
+              {events?.map((event, index) => (
+                <div key={index} className={styles.nftHistoryItem}>
+                  <div>
+                    <span className={styles.nftHistoryCaption}>From: </span>
+                    {event.data.from}
                   </div>
-                ))}
-              </div>
-            )}
-            {/* <div className={styles.nftHistoryItem}>
-              <div>
-                <span className={styles.nftHistoryCaption}>From: </span>
-                0x0000000000000000000000000000
-              </div>
-              <div className={styles.nftHistoryCaption}>
-                <span className={styles.nftHistoryCaption}>To: </span>
-                x0000000000000000000000000000
-              </div>
-            </div> */}
+                  <div className={styles.nftHistoryCaption}>
+                    <span className={styles.nftHistoryCaption}>To: </span>
+                    {event.data.to}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )} */}
+          {/* <div className={styles.nftHistoryItem}>
+            <div>
+              <span className={styles.nftHistoryCaption}>From: </span>
+              0x0000000000000000000000000000
+            </div>
+            <div className={styles.nftHistoryCaption}>
+              <span className={styles.nftHistoryCaption}>To: </span>
+              x0000000000000000000000000000
+            </div>
+          </div>
 
-            {!events && (
-              <span>No onchain history yet.</span>
-            )}
+          {!events && <span>No onchain history yet.</span>} */}
         </div>
       </div>
     </main>

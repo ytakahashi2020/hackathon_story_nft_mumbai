@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           <div className={styles.mainvisualHeader}>
             <h1 className={styles.mainvisualTitle}>STORY NFT</h1>
             <p className={styles.mainvisualDescription}>
-              Third Web is a collection of 10,000 unique NFTs living on the Ethereum blockchain.
+            Story NFT is a pioneering NFT that blends AI and crypto, using AI-generated attributes to create unique images for each NFT, ushering in an uncharted breed of NFTs.
             </p>
           </div>
           <div className={styles.mainvisualButtons}>
