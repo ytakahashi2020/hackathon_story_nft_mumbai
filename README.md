@@ -308,7 +308,7 @@ Deploy a copy of your application to IPFS using the following command:
 yarn deploy
 ```
 
-## Learn More
+## Learn More 
 
 To learn more about thirdweb and Next.js, take a look at the following resources:
 
