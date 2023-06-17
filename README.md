@@ -81,22 +81,13 @@ Ethereumは **「ブロックチェーンのトリレンマ」** のうち、「
 
 **zkEVM**はこの「セキュリティ」と「分散化」を損なうことなく、「スケーラビリティ」を解決する手段の一つであるため、採用しました。
 
-## 1 作成済みURL
-
-**NFT画像の表示**と**メタマスクによるclaim**を行います。
-
-zksync Era Testnetで作成したプロジェクトはこちらです。
-
-https://zksync-era-testnet-garelly.vercel.app/
-
-![](images/2.png)
-
+## 1 作成済みコントラクト
 
 zksync Era Testnetの**コントラクト**はこちら
 
 ![](images/3.png)
 
-https://thirdweb.com/zksync-era-testnet/0x0929624DFbFdA73cdC67dfEEA269003d380A4D1e
+https://thirdweb.com/zksync-era-testnet/0x322565EcD421a9FE92331b8FcF2E0B1B14B16AD2/nfts
 
 ## 2 スマートウォレットについて
 
