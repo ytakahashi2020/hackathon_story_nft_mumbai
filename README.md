@@ -135,6 +135,12 @@ https://github.com/thirdweb-dev/ozdefender-autotask?ref=blog.thirdweb.com
 ### 1.処理の流れ(概要)について
 Webページから**その場でローカルウォレットを作成**し、**ガスレストランザクション**を利用して、NFTを取得します。
 
+- URL
+https://story-nft-garelly.vercel.app/
+
+- コントラクトアドレス
+https://thirdweb.com/mumbai/0xBA3b193CfC90e92E3251896514f7654AF91c3389/nfts
+
 
 ### 2.処理の流れ（詳細）について
 
@@ -202,7 +208,11 @@ ERC4337の**アカウントアブストラクション**では**個々のロジ�
 
 こちらの処理は今回実装した**パーソナルウォレットであるメタマスク**から**スマートウォレット**を作成し、「claim」により、**NFTを取得**しています。
 
+- URL
 https://story-nft-garelly-smart-wallet.vercel.app/
+
+- コントラクトアドレス
+https://thirdweb.com/mumbai/0xBA3b193CfC90e92E3251896514f7654AF91c3389/nfts
 
 ### 2.処理の流れ（詳細）について
 
