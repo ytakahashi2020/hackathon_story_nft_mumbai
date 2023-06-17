@@ -287,7 +287,7 @@ https://thirdweb.com/mumbai/0x4AD8B5a13114d44183f68250898cB546CADd8c54
 # 4 Astar Networkでのコントラクト・Garellyページの作成
 
 - URL
-
+https://hackathon-story-nft-mumbai-smart-wallet.vercel.app/
 
 - コントラクトアドレス
 https://thirdweb.com/astar/0xa92d7e8eC2152B951F19746c4EcaC2768B7827Be
