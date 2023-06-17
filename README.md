@@ -136,7 +136,7 @@ https://github.com/thirdweb-dev/ozdefender-autotask?ref=blog.thirdweb.com
 Webページから**その場でローカルウォレットを作成**し、**ガスレストランザクション**を利用して、NFTを取得します。
 
 - URL
-https://story-nft-garelly.vercel.app/
+https://hackathon-story-nft-mumbai-ytakahashi2020.vercel.app/
 
 - コントラクトアドレス
 https://thirdweb.com/mumbai/0xBA3b193CfC90e92E3251896514f7654AF91c3389/nfts
