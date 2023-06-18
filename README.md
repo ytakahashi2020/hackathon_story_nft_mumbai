@@ -1,4 +1,4 @@
-# 0 プロジェクトの概要1
+# 0 プロジェクトの概要
 
 このプロジェクトは大きく次の３点から構成されます。
 
@@ -9,6 +9,9 @@
 以下、それぞれの説明です。
 
 # 1 AIによるストーリーNFTの作成について
+
+![](images/21.png)
+
 
 ## 0 導入の理由
 
@@ -79,22 +82,13 @@ Ethereumは **「ブロックチェーンのトリレンマ」** のうち、「
 
 **zkEVM**はこの「セキュリティ」と「分散化」を損なうことなく、「スケーラビリティ」を解決する手段の一つであるため、採用しました。
 
-## 1 作成済みURL
-
-**NFT画像の表示**と**メタマスクによるclaim**を行います。
-
-zksync Era Testnetで作成したプロジェクトはこちらです。
-
-https://zksync-era-testnet-garelly.vercel.app/
-
-![](images/2.png)
-
+## 1 作成済みコントラクト
 
 zksync Era Testnetの**コントラクト**はこちら
 
 ![](images/3.png)
 
-https://thirdweb.com/zksync-era-testnet/0x0929624DFbFdA73cdC67dfEEA269003d380A4D1e
+https://thirdweb.com/zksync-era-testnet/0x322565EcD421a9FE92331b8FcF2E0B1B14B16AD2/nfts
 
 ## 2 スマートウォレットについて
 
@@ -284,6 +278,16 @@ https://thirdweb.com/mumbai/0x4AD8B5a13114d44183f68250898cB546CADd8c54
 
 以上が**スマートウォレットを使用したNFTの取得**になります。
 
+# 4 Astar Networkでのコントラクト・Garellyページの作成
+
+- URL
+https://hackathon-story-nft-astar.vercel.app/
+
+- コントラクトアドレス
+https://thirdweb.com/astar/0xa92d7e8eC2152B951F19746c4EcaC2768B7827Be
+
+![](images/20.png)
+
 ## Getting Started
 
 Create a project using this example:
@@ -304,8 +308,6 @@ Deploy a copy of your application to IPFS using the following command:
 ```bash
 yarn deploy
 ```
-
-## Learn More
 
 To learn more about thirdweb and Next.js, take a look at the following resources:
 
