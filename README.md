@@ -283,6 +283,8 @@ https://thirdweb.com/mumbai/0x4AD8B5a13114d44183f68250898cB546CADd8c54
 
 # 4 Astar Networkでのコントラクト・Garellyページの作成
 
+thirdwebを利用し、Astarのコントラクト、Webページを作成しました。
+
 - URL
 https://hackathon-story-nft-astar.vercel.app/
 
@@ -290,6 +292,22 @@ https://hackathon-story-nft-astar.vercel.app/
 https://thirdweb.com/astar/0xa92d7e8eC2152B951F19746c4EcaC2768B7827Be
 
 ![](images/20.png)
+
+# 5 技術スタック
+
+## フロントエンド等
+- next.js
+- typescript
+- thirdwebSDK
+
+## ブロックチェーン
+- Astar
+- zkSync Era Testnet
+- mumbai
+
+## その他
+- OpenZeppelin Defender
+- ERC4337（アカウントアブストラクション）
 
 ## Getting Started
 
